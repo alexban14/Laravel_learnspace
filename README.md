@@ -9,8 +9,8 @@
 
 ## Configuration
 
-- change the C:\Windows\System32\drivers\etc\hosts file in order to bind a certain ip to a url for serving your app locally
--you can find and change the ip in the Homstead.yaml file
+- Change the C:\Windows\System32\drivers\etc\hosts file in order to bind a certain ip to a url for serving your app locally
+- You can find and change the ip in the Homstead.yaml file
 ex: 192.168.56.56  homestead.test
 
 ## Terminal commands to run (make sure to run them in powershell for proper outcome)

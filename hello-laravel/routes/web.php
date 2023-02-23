@@ -217,13 +217,23 @@ Route::post('form', function (Illuminate\Http\Request $request) {
 });
 
 // Custom Responses
-response()->make();
-// response()->json() and ->jsonp();
-response()->json()->jsonp();
-// response()->download(), ->streamDownload(), and ->file();
-response()->download()->streamDownload(), and ->file();
+// response()->make();
+// // response()->json() and ->jsonp();
+// response()->json()->jsonp();
+// // response()->download(), ->streamDownload(), and ->file();
+// response()->download()->streamDownload(), and ->file();
 
-// Example 3-46. Streaming downloads from external servers
-return response()->streamDownload(function () {
-    echo DocumentService::file('myFile')->getContent();
-}, 'myFile.pdf');
+// // Example 3-46. Streaming downloads from external servers
+// return response()->streamDownload(function () {
+//     echo DocumentService::file('myFile')->getContent();
+// }, 'myFile.pdf');
+
+Route::get('home', function () {
+    return view('home')
+        ->with('posts', Post::recent());
+});
+
+Route::get('about', function () {
+    return view('about')
+        ->with('posts', Post::recent());
+});
