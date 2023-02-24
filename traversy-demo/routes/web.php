@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PagesController::class, 'index']);
-
 Route::get('/about', [PagesController::class, 'about']);
-
 Route::get('/services', [PagesController::class, 'services']);
+
+// creates all the routes neceary for our reosurce methods from the controller
+Route::resource('posts', PostsController::class);
+
+// Route::prefix('posts')->group(function () {
+//     Route::get('/', [PostsController::class, 'index']);
+//     Route::get('/create', [PostsController::class, 'create']);
+//     Route::post('/', [PostsController::class, 'store']);
+//     Route::get('/{id}', [PostsController::class, 'show']);
+// });
