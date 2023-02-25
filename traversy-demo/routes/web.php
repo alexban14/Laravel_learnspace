@@ -21,10 +21,3 @@ Route::get('/services', [PagesController::class, 'services']);
 
 // creates all the routes neceary for our reosurce methods from the controller
 Route::resource('posts', PostsController::class);
-
-// Route::prefix('posts')->group(function () {
-//     Route::get('/', [PostsController::class, 'index']);
-//     Route::get('/create', [PostsController::class, 'create']);
-//     Route::post('/', [PostsController::class, 'store']);
-//     Route::get('/{id}', [PostsController::class, 'show']);
-// });
